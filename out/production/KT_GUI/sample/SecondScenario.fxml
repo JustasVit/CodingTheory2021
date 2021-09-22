@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecondScenarioController">
+  <children>
+    <MenuBar style="-fx-background-color: #FFFFFF;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxWidth="-1.0" prefHeight="0.0" prefWidth="678.0" style="-fx-background-color: #7a003f;" VBox.vgrow="ALWAYS">
+      <children>
+        <TextField fx:id="stringInput" layoutX="175.0" layoutY="31.0" />
+        <Button fx:id="encodeButton" layoutX="214.0" layoutY="71.0" mnemonicParsing="false" onAction="#EncodeWords" text="Užkoduoti" />
+        <TextArea fx:id="messageInBitsField" layoutX="96.0" layoutY="145.0" prefHeight="46.0" prefWidth="307.0" />
+        <Text fill="WHITE" layoutX="191.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Originalus pranešimas" />
+        <Button fx:id="sendToChannelButton" layoutX="321.0" layoutY="284.0" mnemonicParsing="false" onAction="#SendMessagesTroughChannel" text="Siųsti kanalu" />
+        <TextArea fx:id="receivedMessageFromChannelField" layoutX="96.0" layoutY="350.0" prefHeight="46.0" prefWidth="307.0" />
+        <Text fill="WHITE" layoutX="148.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Originalus pranešimas, išsiųstas kanalu" wrappingWidth="204.7999511718749" />
+        <Text fill="#faf8f8" layoutX="143.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Užkoduotas pranešimas, išsiųstas kanalu" />
+        <TextArea fx:id="restoredMessageField" layoutX="96.0" layoutY="508.0" prefHeight="46.0" prefWidth="307.0" />
+        <Text fill="WHITE" layoutX="167.0" layoutY="499.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atkurtas originalus pranešimas" />
+        <TextField fx:id="probabilityField" layoutX="211.0" layoutY="282.0" prefHeight="26.0" prefWidth="98.0" />
+        <Text fill="WHITE" layoutX="96.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Iškraipymo tikimybė" />
+            <TextArea fx:id="encodedMessageInBitsField" layoutX="96.0" layoutY="225.0" prefHeight="46.0" prefWidth="307.0" />
+            <Text fill="WHITE" layoutX="187.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Užkoduotas pranešimas" />
+            <TextArea fx:id="receivedEncodedMessageFromChannelField" layoutX="96.0" layoutY="429.0" prefHeight="46.0" prefWidth="307.0" />
+            <TextArea fx:id="restoredEncodedMessageField" layoutX="96.0" layoutY="589.0" prefHeight="46.0" prefWidth="307.0" />
+            <Text fill="WHITE" layoutX="186.0" layoutY="579.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dekoduotas pranešimas" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>
